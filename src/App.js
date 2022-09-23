@@ -11,7 +11,7 @@ function App() {
      <Container className='contenedorFormulario'>
       <div>
        <h1 className='display-4'>Lista de tareas</h1>
-       <Formulario titulo="hola mundo"/>
+       <Formulario/>
       </div>
       </Container>
     </div>

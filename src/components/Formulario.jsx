@@ -4,6 +4,9 @@ import { Form, Button } from "react-bootstrap";
 import ListaTarea from "./ListaTarea";
 
 const Formulario = () => {
+  const [tarea, setTarea] = useState("");
+  const [arregloTarea, setarregloTarea] = useState([]);
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     setarregloTarea([...arregloTarea, tarea]);
@@ -16,8 +19,6 @@ const Formulario = () => {
   }
 
 
-  const [tarea, setTarea] = useState("");
-  const [arregloTarea, setarregloTarea] = useState([]);
   return (
     <>
       <Form onSubmit={handleSubmit}>

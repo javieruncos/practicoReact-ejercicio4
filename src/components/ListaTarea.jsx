@@ -6,9 +6,10 @@ const ListaTarea = ({arregloTarea,borrarTarea}) => {
     return (
         <ListGroup>
             {
-             arregloTarea.map((Item,indice)=><ItemTarea key={indice} nombre={Item} borrarTarea={borrarTarea}/>)
-
+             arregloTarea.map((Item,indice)=><ItemTarea nombre={Item} key={indice} borrarTarea={borrarTarea}/>)
+                   
             }
+            
        </ListGroup>
     );
 };
