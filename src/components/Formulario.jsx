@@ -30,7 +30,7 @@ const Formulario = () => {
              </Button>
            </Form.Group>
        </Form> 
-        <ListaTarea/>
+        <ListaTarea arregloTarea={arregloTarea}/>
         </>
     );
 };
