@@ -1,11 +1,19 @@
 import React from "react";
-import { useState } from "react";
+import { useState ,useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import ListaTarea from "./ListaTarea";
 
 const Formulario = () => {
+   
+  const listaLocalS = JSON.parse(localStorage.getItem("listaTarea"))|| [];
+   
   const [tarea, setTarea] = useState("");
-  const [arregloTarea, setarregloTarea] = useState([]);
+  const [arregloTarea, setarregloTarea] = useState(listaLocalS);
+
+   useEffect(()=>{
+     localStorage.setItem("listaTarea",JSON.stringify(arregloTarea))
+    },[arregloTarea])
+
   
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,7 +25,7 @@ const Formulario = () => {
     let newArreglo = arregloTarea.filter((Item)=>Item !== nombre);
     setarregloTarea(newArreglo)
   }
-
+   
 
   return (
     <>
